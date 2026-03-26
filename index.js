@@ -16,11 +16,11 @@ const altura = 10;
 // ==========================
 const receita = new Receita();
 
-// calcula ingredientes para 1 tonelada
-const ingredientes = receita.CalcularFator();
+// agora recebe toneladas
+const ingredientes = receita.CalcularFator(toneladas);
 
-console.log("=== INGREDIENTES (1 tonelada) ===");
-console.log(ingredientes);
+console.log("=== INGREDIENTES ===");
+console.table(ingredientes);
 
 // ==========================
 // 🧊 SORVETE
@@ -34,21 +34,19 @@ const sorvete = new Sorvete(
 );
 
 console.log("\n=== PRODUÇÃO ===");
-console.log("Peso total (g):", sorvete.getPesoTotal());
+console.log("Peso total (g):", sorvete.pesoTotal());
 console.log("Volume total:", sorvete.volumeTotal.toFixed(2));
 console.log("Volume pote:", sorvete.volumePote.toFixed(2));
-console.log("Quantidade de potes:", sorvete.getQtdePotes());
+console.log("Quantidade de potes:", sorvete.qtdePotes());
 
 // ==========================
 // 💰 CUSTO
 // ==========================
 const custo = new Custo();
 
-// calcula custo baseado nos ingredientes
 const precos = custo.calcularCusto(ingredientes);
 
 console.log("\n=== CUSTO POR INGREDIENTE ===");
-console.log(precos);
+console.table(precos);
 
-console.log("\n=== CUSTO TOTAL ===");
-console.log("Total: R$", custo.totalCusto.toFixed(2));
+console.log("Custo total (R$):", custo.totalCusto.toFixed(2));
