@@ -25,9 +25,9 @@ export default class Sorvete {
   }
 
   calcularQuantidadePotes() {
-    if (this.volumePote === 0) return 0;
+    if (this.tamanhoPote === 0) return 0;
 
-    return Math.floor(this.volumeTotal / this.volumePote);
+    return Math.floor(this.totalGramas / this.tamanhoPote);
   }
 
   pesoTotal() {
@@ -36,5 +36,9 @@ export default class Sorvete {
 
   qtdePotes() {
     return this.quantidadePotes;
+  }
+
+  pesoUnitarioPote() {
+    return Number((this.volumePote * this.densidade).toFixed(2));
   }
 }

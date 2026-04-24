@@ -45,4 +45,9 @@ export default class Custo {
 
     this.totalCusto = Number(somaBruta.toFixed(2));
   }
+
+  custoPorPote(qtdePotes) {
+    if (qtdePotes === 0) return 0;
+    return Number((this.totalCusto / qtdePotes).toFixed(2));
+  }
 }
