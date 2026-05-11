@@ -1,4 +1,4 @@
-export default class Sorvete {
+class Sorvete {
   constructor(toneladas, densidade, tamanhoPote, raio, altura) {
     this.toneladas = toneladas;
     this.densidade = densidade;

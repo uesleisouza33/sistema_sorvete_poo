@@ -1,4 +1,4 @@
-export default class Receita {
+class Receita {
     constructor(leite = 500, creme = 160, acucar = 100, condensado = 120, granulado = 20) {
         this.leite = leite
         this.creme = creme

@@ -1,7 +1,3 @@
-import Receita from './models/Receita.js';
-import Sorvete from './models/Sorvete.js';
-import Custo from './models/Custo.js';
-
 const DENSIDADE = 0.6;
 
 const TAMANHOS = {

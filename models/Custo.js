@@ -1,4 +1,4 @@
-export default class Custo {
+class Custo {
   constructor(
     leite = 6.0,
     creme = 20.0,
