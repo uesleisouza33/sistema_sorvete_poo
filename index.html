@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produção de Sorvete</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="header">
+      <div class="header-icon">🍦</div>
+      <div class="header-text">
+        <h1>Produção de Sorvete</h1>
+        <p>Calculadora de produção</p>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <p class="section-label">TAMANHO DO POTE</p>
+      <div class="card">
+        <div class="icon-wrap">🫙</div>
+        <div class="card-body">
+          <span class="card-title">Tamanho</span>
+          <span class="card-value" id="tamanho-display">Médio (900ml)</span>
+        </div>
+        <select class="chip-select" id="tamanho-pote">
+          <option value="400">Pequeno (400ml)</option>
+          <option value="900" selected>Médio (900ml)</option>
+          <option value="1700">Grande (1700ml)</option>
+        </select>
+      </div>
+
+      <p class="section-label">META DE PRODUÇÃO</p>
+      <div class="card">
+        <div class="icon-wrap">⚖️</div>
+        <div class="card-body">
+          <span class="card-title">Toneladas</span>
+          <span class="card-value" id="meta-display">1 Tonelada</span>
+        </div>
+        <select class="chip-select" id="meta-producao">
+          <option value="1" selected>1 Tonelada</option>
+          <option value="5">5 Toneladas</option>
+          <option value="12">12 Toneladas</option>
+        </select>
+      </div>
+
+      <p class="section-label">MEDIDAS DO POTE</p>
+      <div class="card">
+        <div class="icon-wrap">📏</div>
+        <div class="card-body">
+          <span class="card-title">Diâmetro (cm)</span>
+          <span class="card-hint">Preencha as medidas do pote</span>
+        </div>
+        <div class="spinner">
+          <button class="spin-btn" id="diam-minus">−</button>
+          <span class="spin-val" id="diam-value">1</span>
+          <button class="spin-btn" id="diam-plus">+</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon-wrap">📐</div>
+        <div class="card-body">
+          <span class="card-title">Altura (cm)</span>
+          <span class="card-hint">Para cálculo do peso unitário</span>
+        </div>
+        <div class="spinner">
+          <button class="spin-btn" id="alt-minus">−</button>
+          <span class="spin-val" id="alt-value">1</span>
+          <button class="spin-btn" id="alt-plus">+</button>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="btn-calcular">🧮 CALCULAR PRODUÇÃO</button>
+
+      <h2 class="report-heading">Relatório de Produção</h2>
+
+      <div class="report-card">
+        <div class="report-header" id="report-title">Relatório de Produção</div>
+        <div class="report-body">
+          <div class="report-row">
+            <span class="report-label">Tamanho do pote</span>
+            <span class="report-value" id="r-tamanho">—</span>
+          </div>
+          <div class="report-row">
+            <span class="report-label">Peso unitário do pote</span>
+            <span class="report-value" id="r-peso">—</span>
+          </div>
+          <div class="report-row">
+            <span class="report-label">Rendimento</span>
+            <span class="report-value" id="r-rendimento">—</span>
+          </div>
+          <div class="report-divider"></div>
+          <div class="report-row">
+            <span class="report-label">Custo total de produção</span>
+            <span class="report-value" id="r-custo-total">—</span>
+          </div>
+          <div class="report-row last">
+            <span class="report-label">Custo por pote</span>
+            <span class="report-value" id="r-custo-pote">—</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-secondary" id="btn-limpar">↺ LIMPAR</button>
+
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
